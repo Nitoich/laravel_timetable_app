@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/timetable', 'App\Http\Controllers\TimetableController@selectGroupPage');
+Route::get('/timetable/{group}', 'App\Http\Controllers\TimetableController@getTimetableByGroup');
